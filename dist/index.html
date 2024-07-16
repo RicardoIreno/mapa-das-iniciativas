@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+    <script type="module" crossorigin src="/assets/index-Bh8Q7jXW.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-XVhPlYd_.css">
+  </head>
+  <body>
+    <section class="map-section">
+      <div class="map-content">
+
+        <div class="col-one">
+          <ul class="layers-options">
+            <li>
+              <input class="point-green" type="checkbox" id="checkbox1" checked />
+              <label for="checkbox1">
+                Iniciativas Verdes
+              </label> 
+            </li>
+
+            <li>
+              <input class="point-blue" type="checkbox" id="checkbox2" checked/>
+              <label for="checkbox2">
+                Iniciativas Azuis
+              </label>
+            </li>
+
+            <li>
+              <input class="point-red" type="checkbox" id="checkbox3" checked/>
+              <label for="checkbox3"> 
+                Iniciativas Vermelhas
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-two">
+          <div class="info">
+            <span class="info-tip">Selecione uma marcação no mapa para saber mais detalhes</span>
+            <span id="info-entity"></span>
+            <h4 id="info-iniciative"></h4>
+            <p id="info-desc"></p>
+            <a id="info-site" target="_blank" href=""></a>
+            <a id="info-contact" target="_blank" href=""></a>
+          </div>
+        </div>
+
+        <div id="map"></div>
+
+      </div>
+    </section>
+     <p id="test" style="margin-top: 3rem;"></p>
+     <p id="test2" style="margin-top: 3rem;"></p>
+
+  </body>
+</html>
