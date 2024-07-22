@@ -9,9 +9,33 @@ import { newVectorLayer } from './functions/newVectorLayer';
 import { assert } from './functions/assert';
 import { getData } from './functions/getData';
 import { formatToGeoJSON } from './functions/formatToGeoJSON';
-import { separateLayers } from './functions/separateLayers';
+// import { separateLayers } from './functions/separateLayers';
 import './style.css'
+import { DataTablelineProps } from "../src/types"
 
+export async function separateLayers(
+  spreadsheetData: object[],
+  camada1: object[],
+  camada2: object[],
+  camada3: object[]) {
+  const data = spreadsheetData as DataTablelineProps[]
+  data.forEach(d => {
+    switch (d.layer) {
+      case "camada1": {
+        camada1.push(d)
+        break
+      }
+      case "camada2": {
+        camada2.push(d)
+        break
+      }
+      case "camada3": {
+        camada3.push(d)
+        break
+      }
+    }
+  })
+}
 
 const spreadsheetID = '1qyykcCiZUCmeH-Ae5zVZToqurcFCbL72XrooxXwoZLQ'
 const url = `https://docs.google.com/spreadsheets/d/${spreadsheetID}/gviz/tq?tqx=out:json`
