@@ -17,11 +17,11 @@ const spreadsheetID = '1qyykcCiZUCmeH-Ae5zVZToqurcFCbL72XrooxXwoZLQ'
 const url = `https://docs.google.com/spreadsheets/d/${spreadsheetID}/gviz/tq?tqx=out:json`
 const spreadsheetData = await getData(url)
 
-let camada1:object[] = []
-let camada2:object[] = []
+let camada1: object[] = []
+let camada2: object[] = []
 let camada3: object[] = []
 
-separateLayers(spreadsheetData, camada1, camada2, camada3)
+await separateLayers(spreadsheetData, camada1, camada2, camada3)
 
 const dataOne = newVectorLayer(formatToGeoJSON( camada1 ), "hsla(100, 50%, 50%, 0.8)")
 const dataTwo = newVectorLayer(formatToGeoJSON( camada2 ), "hsla(200, 100%, 50%, 0.8)")
