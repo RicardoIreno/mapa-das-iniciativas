@@ -3,29 +3,39 @@
 Mapa das iniciativas do painel "Universidades e sustentabilidade da vida" do SoU Ciência.
 *Licença GNU 3.0*
 
-### Pré-requisitos para inicializar o projeto
+
+A pasta `dist` possui os arquivos prontos para o uso. Todavia, caso queira fazer o build a partir do códugo fonte, siga os seguintes passos:
+
+### 1. Pré-requisitos para inicializar o projeto
 - Node.js
-- [Yarn](https://yarnpkg.com/)
 
-#### Instalação do yarn
+
+#### 2. Inicialize o projeto
+
+Usando npm:
 
 ```
-npm install --global yarn
+npm install
 ```
-
-### Build
-
-Para inicializar o projeto:
+Usando yarn:
 
 ```
 yarn
 ```
 
-Para fazer o build:
+### 3. Build
+
+Usando npm
+
+```
+npm build
+```
+
+Usando o yarn:
 ```
 yarn build
 ```
 
-Todavia, a pasta dist contem o arquivo minificado.
+
 
 
