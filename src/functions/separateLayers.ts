@@ -1,6 +1,6 @@
 import { DataTablelineProps } from "../types";
 
-export async function separateLayers(
+export function separateLayers(
   spreadsheetData: object[],
   camada1: object[],
   camada2: object[],

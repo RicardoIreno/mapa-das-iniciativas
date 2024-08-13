@@ -39,7 +39,7 @@ html, body {
   height: 550px;
 }
 
-.col-one, .col-two {
+.col-one {
   position: absolute;
   z-index: 2;
   height: 99%;
@@ -50,10 +50,6 @@ html, body {
 .col-one {
   left: 30px;
 }
-.col-two {
-  right: 30px;
-}
-
 .layers-options {
   padding-left: 0;
 }
@@ -87,7 +83,6 @@ html, body {
 .info,
 .info-tip,
 .layers-options li {
-  color:hsla(0, 0%, 100%, .7);
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-variation-settings:
@@ -114,7 +109,6 @@ html, body {
   margin: .5rem 0;
 }
 #info-site, #info-contact {
-  color:hsla(0, 0%, 100%, .7);
   display: block;
   font-size: 1rem;
   font-style: none;
@@ -158,3 +152,46 @@ input[type="checkbox"] {
   background-color: hsla(10, 100%, 50%, 0.3);
 }
 
+
+.ol-popup {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  bottom: 12px;
+  min-height: 200px;
+  min-width: 280px;
+  z-index: 99;
+}
+.ol-popup:after, .ol-popup:before {
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.ol-popup:after {
+  border-top-color: white;
+  border-width: 10px;
+  left: 48px;
+  margin-left: -10px;
+}
+.ol-popup:before {
+  border-top-color: #cccccc;
+  border-width: 11px;
+  left: 48px;
+  margin-left: -11px;
+}
+.ol-popup-closer {
+  text-decoration: none;
+  position: absolute;
+  top: 2px;
+  right: 8px;
+}
+.ol-popup-closer:after {
+  content: "✖";
+}
